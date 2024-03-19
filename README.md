@@ -4,4 +4,5 @@
 
 - HTML5, CSS, GSAP ScrollTrigger
 
-## Demo:
+## Demo Link:
+- https://gsap-geekyants-challenge.vercel.app/
