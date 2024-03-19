@@ -10,7 +10,7 @@ gsap.to(".left-door", {
     start: "top top",
     end: "400px",
   },
-  x: -200,
+  x: -700,
 });
 
 gsap.to(".right-door", {
@@ -19,7 +19,7 @@ gsap.to(".right-door", {
     start: "top top",
     end: "400px",
   },
-  x: 400,
+  x: 700,
 });
 
 gsap.to(".logo", {
@@ -27,11 +27,20 @@ gsap.to(".logo", {
     scrub: 1,
   },
   scale: 4,
+  y: 300,
 });
+
 gsap.to(".logo-text", {
   scrollTrigger: {
     scrub: 1,
   },
-  fontSize: "96px",
-  y: 60,
+  fontSize: "8vw",
+  y: 400,
+});
+
+gsap.to("#bg-desk", {
+  scrollTrigger: {
+    scrub: 1,
+  },
+  scale: 1.35,
 });

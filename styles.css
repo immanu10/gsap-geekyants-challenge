@@ -7,6 +7,7 @@
 html {
   font-family: "Roboto", sans-serif;
   font-style: normal;
+  height: 100vh;
 }
 
 body {
@@ -28,10 +29,8 @@ body {
   display: flex;
 }
 .door .left-door {
-  position: relative;
-  width: 40%;
+  width: 50%;
   height: 100%;
-  /* border-right: 2px solid #f1f1f1; */
   background: white;
   background: linear-gradient(
     to right bottom,
@@ -42,10 +41,13 @@ body {
   z-index: 1;
   box-shadow: 0 0 1rem rgba(255, 255, 255, 0.1);
 }
+
 .left-door-handle {
-  position: absolute;
-  top: 40%;
-  right: 0;
+  width: fit-content;
+  margin-left: auto;
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,18 +62,18 @@ body {
   align-items: center;
   background-color: #1e1d1d;
   color: #e8e80c;
-  font-size: 14px;
-  padding: 6px 10px;
+  font-size: 20px;
+  padding: 8px 12px;
 }
 .left-door-sticker span {
   background-color: #e8e80c;
-  height: 12px;
-  width: 6px;
-  margin-left: 6px;
+  height: 18px;
+  width: 8px;
+  margin-left: 8px;
 }
 
 .door .right-door {
-  width: 60%;
+  width: 50%;
   height: 100%;
   background-color: #00ffff;
   background: white;
@@ -84,15 +86,35 @@ body {
   z-index: 1;
   box-shadow: 0 0 1rem rgba(255, 255, 255, 0.1);
 }
-
-.hero-container {
-  position: fixed;
-  top: 50%;
+.scroll-down-icon {
+  z-index: 1;
+  position: absolute;
+  top: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 20px;
+  color: #0f0f0f;
+  padding: 4px 0;
+}
+.hero-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+}
+.hero-container > h2,
+.hero-container > .svgWrapper,
+.hero-container > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .svgWrapper {
@@ -105,7 +127,8 @@ body {
 
 .glitch {
   position: relative;
-  font-size: 32px;
+  font-size: 1.8rem;
+  line-height: 1;
   color: #fff;
   letter-spacing: 0.025em;
 }
