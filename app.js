@@ -1,9 +1,7 @@
-// use a script tag or an external JS file
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger);
 });
 
-// gsap code here!
 gsap.to(".left-door", {
   scrollTrigger: {
     scrub: 1,
